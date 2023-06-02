@@ -1,6 +1,7 @@
 .intro{
     background: linear-gradient(180deg, #E6F4FF 0%, #D2EBFF 100%);
     height: calc(100vh - 70px);
+    max-height: 630px;
     display: flex;
     justify-content: center;
 }
