@@ -89,7 +89,7 @@ const Header = () => {
                 </div>
                 <div className={styles.right}>
                     <Dropdown />
-                    <Link href="/contact" className={styles.btn}>Get started</Link>
+                    <Link href="/contact" className={`${styles.btn} btn`}>Get started</Link>
                 </div>
             </div>
         </header>

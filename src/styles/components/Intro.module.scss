@@ -1,3 +1,38 @@
 .intro{
-    
+    background: linear-gradient(180deg, #E6F4FF 0%, #D2EBFF 100%);
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+}
+.body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content{
+    width: 50%;
+    max-width: 596px;
+}
+.img{
+    line-height: 0;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    img{
+        line-height: 0;
+    }
+}
+.title{
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 120%;
+    margin-bottom: 24px;
+}
+.p{
+    font-size: 18px;
+    line-height: 120%;
+    margin-bottom: 24px;
+    color: rgb(98, 98, 112);
 }
