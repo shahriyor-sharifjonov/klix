@@ -1,0 +1,55 @@
+@import '../mixins.scss';
+.footer{
+    background: #073B62;
+    padding: 48px 0;
+}
+.body{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include media(768){
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
+    }
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    width: calc(25% - 20px);
+    @include media(768){
+        width: 100%;
+        align-items: center;
+    }
+}
+.logo{
+    line-height: 0;
+    margin-bottom: 12px;
+    img{
+        line-height: 0;
+    }
+}
+.copy{
+    color: #bdbdbd;
+    font-size: 14px;
+    line-height: 120%;
+}
+.title{
+    font-weight: 600;
+    color: #fff;
+    font-size: 16px;
+    line-height: 120%;
+    margin-bottom: 12px;
+}
+.link{
+    color: #BDBDBD;
+    line-height: 120%;
+    text-decoration: none;
+    transition: 300ms ease-out;
+    &+.link{
+        margin-top: 12px;
+    }
+    &:hover{
+        color: #fff;
+    }
+}

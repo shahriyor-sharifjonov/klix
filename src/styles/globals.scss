@@ -38,7 +38,14 @@ ul {
   list-style-type: none;
 }
 
+.wrapper{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .main{
+  flex: 1 1 auto;
   padding-top: 70px;
 }
 
