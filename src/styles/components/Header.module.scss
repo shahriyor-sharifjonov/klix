@@ -139,9 +139,11 @@
         height: 58px;
         min-height: 58px;
         display: flex;
-        opacity: 0;
         transition: 300ms ease-out;
-        visibility: hidden;
+        @include media(992){
+            opacity: 0;
+            visibility: hidden;
+        }
     }
     &Con{
         width: max-content;

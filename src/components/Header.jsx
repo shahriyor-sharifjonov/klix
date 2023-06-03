@@ -104,7 +104,7 @@ const Dropdown = () => {
 }
 
 const Header = () => {
-    const [menuOpen, setMenuOpen] = useState(true)
+    const [menuOpen, setMenuOpen] = useState(false)
     const router = useRouter()
     const { locale } = router 
     let t;
