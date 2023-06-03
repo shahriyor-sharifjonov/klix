@@ -1,3 +1,4 @@
+import Company from '@/components/Company'
 import Header from '@/components/Header'
 import Intro from '@/components/Intro'
 import Merchants from '@/components/Merchants'
@@ -15,6 +16,7 @@ export default function Home() {
       </Head>
       <Intro />
       <Merchants />
+      <Company />
     </>
   )
 }

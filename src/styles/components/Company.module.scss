@@ -1,0 +1,73 @@
+@import '../mixins.scss';
+.company{
+    padding: 35px 0 80px 0;
+}
+.title{
+    font-size: 42px;
+    line-height: 120%;
+    text-align: center;
+    max-width: 596px;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    svg{
+        margin-bottom: -5px;
+    }
+}
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &+.item{
+        margin-top: 80px;
+    }
+    &1{
+        .itemRight{
+            background: #0094FF;
+        }
+    }
+    &2{
+        .itemRight{
+            background: rgb(181, 140, 202);
+        }
+    }
+    &3{
+        .itemRight{
+            background: rgb(236, 232, 230);
+        }
+    }
+    &Left{
+        width: 516px;
+    }
+    &Right{
+        height: 454px;
+        width: 516px;
+        border-radius: 1.25rem;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &Img{
+        line-height: 0;
+        img{
+            line-height: 0;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    &Title{
+        font-size: 24px;
+        line-height: 120%;
+        margin-bottom: 16px;
+        font-weight: 700;
+        max-width: 389px;
+    }
+    &P{
+        max-width: 389px;
+        font-size: 16px;
+        line-height: 120%;
+        color: rgb(98, 98, 112);
+    }
+}
