@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Intro from '@/components/Intro'
+import Merchants from '@/components/Merchants'
 import Head from 'next/head'
 import Image from 'next/image'
 
@@ -13,6 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Intro />
+      <Merchants />
     </>
   )
 }
