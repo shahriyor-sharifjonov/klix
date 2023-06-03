@@ -126,8 +126,8 @@ const Header = () => {
                     <div className={`${styles.menu} ${menuOpen && styles.active}`}>
                         <div className={styles.menuContent}>
                             <div className={`container ${styles.menuCon}`}>
-                                <Link href="/" className={`${styles.menuItem} ${router.asPath === '/' && styles.active}`}>{t['For businesses']}</Link>
-                                <Link href="/shoppers" className={`${styles.menuItem} ${router.asPath === '/shoppers' && styles.active}`}>{t['For shoppers']}</Link>
+                                <Link onClick={() => {setMenuOpen(!menuOpen)}} href="/" className={`${styles.menuItem} ${router.asPath === '/' && styles.active}`}>{t['For businesses']}</Link>
+                                <Link onClick={() => {setMenuOpen(!menuOpen)}} href="/shoppers" className={`${styles.menuItem} ${router.asPath === '/shoppers' && styles.active}`}>{t['For shoppers']}</Link>
                             </div>
                         </div>
                     </div>
