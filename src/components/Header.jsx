@@ -1,14 +1,27 @@
-import React from 'react'
 import styles from '@/styles/components/Header.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from "react";
+import React, { useState } from 'react';
 import { useRouter } from 'next/router'
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
+
+import uz from '@/locales/uz'
+import ru from '@/locales/ru'
+import en from '@/locales/en'
 
 const Dropdown = () => {
-    const [shown, setShown] = useState(false);
-  
+    const [shown, setShown] = useState(false)
+    const router = useRouter()
+    const { locale } = router 
+    let t;
+    if(locale === 'ru'){
+        t = ru
+    }else if(locale === 'uz'){
+        t = uz
+    }else if(locale === 'en'){
+        t = en 
+    }
+    
     const showMenu = {
         enter: {
             opacity: 1,
@@ -28,7 +41,8 @@ const Dropdown = () => {
         down: {
             rotate: 0,
         }
-    };
+    }
+
     return (
         <>
             <motion.div
@@ -40,8 +54,24 @@ const Dropdown = () => {
             </motion.div>
             <motion.div className={styles.lang} onClick={() => {setShown(!shown)}}>
                 <span className={styles.langBtn}>
-                    <Image src="/en.svg" alt="" width={18} height={18}/>
-                    English
+                    {locale === 'en' && (
+                        <>
+                            <Image src="/en.svg" alt="" width={18} height={18}/>
+                            English
+                        </>
+                    )}
+                    {locale === 'ru' && (
+                        <>
+                            <Image src="/ru.svg" alt="" width={18} height={18}/>
+                            Русский
+                        </>
+                    )}
+                    {locale === 'uz' && (
+                        <>
+                            <Image src="/uz.svg" alt="" width={18} height={18}/>
+                            O&apos;zbekcha
+                        </>
+                    )}
                     <motion.svg
                         variants={showMenu}
                         initial="up"
@@ -55,41 +85,50 @@ const Dropdown = () => {
                     animate={shown ? "enter" : "exit"}
                     className={styles.langList}
                 >
-                    <button className={styles.langItem}>
+                    <button className={styles.langItem} onClick={() => {router.push(router.pathname, router.asPath, { locale: 'en' })}}>
                         <Image src="/en.svg" alt="" width={18} height={18} draggable="false" />
                         English
                     </button>
-                    <button className={styles.langItem}>
+                    <button className={styles.langItem} onClick={() => {router.push(router.pathname, router.asPath, { locale: 'ru' })}}>
                         <Image src="/ru.svg" alt="" width={18} height={18} draggable="false" />
-                        Russian
+                        Русский
                     </button>
-                    <button className={styles.langItem}>
+                    <button className={styles.langItem} onClick={() => {router.push(router.pathname, router.asPath, { locale: 'uz' })}}>
                         <Image src="/uz.svg" alt="" width={18} height={18} draggable="false" />
-                        Uzbek
+                        O&apos;zbekcha
                     </button>
                 </motion.ul>
             </motion.div>
         </>
-    );
-};
+    )
+}
 
 const Header = () => {
     const router = useRouter()
+    const { locale } = router 
+    let t;
+    if(locale === 'ru'){
+        t = ru
+    }else if(locale === 'uz'){
+        t = uz
+    }else if(locale === 'en'){
+        t = en 
+    }
     return (
-        <header className={styles.header}> 
+        <header className={styles.header}>
             <div className={`${styles.nav} container`}>
                 <div className={styles.left}>
                     <Link href="/" className={styles.logo}>
                         <Image src="/logo.svg" alt="" width={76} height={56} draggable="false"/>
                     </Link>
                     <div className={styles.menu}>
-                        <Link href="/" className={`${styles.menuItem} ${router.asPath === '/' && styles.active}`}>For businesses</Link>
-                        <Link href="/shoppers" className={`${styles.menuItem} ${router.asPath === '/shoppers' && styles.active}`}>For shoppers</Link>
+                        <Link href="/" className={`${styles.menuItem} ${router.asPath === '/' && styles.active}`}>{t['For businesses']}</Link>
+                        <Link href="/shoppers" className={`${styles.menuItem} ${router.asPath === '/shoppers' && styles.active}`}>{t['For shoppers']}</Link>
                     </div>
                 </div>
                 <div className={styles.right}>
                     <Dropdown />
-                    <Link href="/contact" className={`${styles.btn} btn`}>Get started</Link>
+                    <Link href="/contact" className={`${styles.btn} btn`}>{t['Get started']}</Link>
                 </div>
             </div>
         </header>
