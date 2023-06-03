@@ -104,6 +104,7 @@ const Dropdown = () => {
 }
 
 const Header = () => {
+    const [menuOpen, setMenuOpen] = useState(true)
     const router = useRouter()
     const { locale } = router 
     let t;
@@ -121,14 +122,22 @@ const Header = () => {
                     <Link href="/" className={styles.logo}>
                         <Image src="/logo.svg" alt="" width={76} height={56} draggable="false"/>
                     </Link>
-                    <div className={styles.menu}>
-                        <Link href="/" className={`${styles.menuItem} ${router.asPath === '/' && styles.active}`}>{t['For businesses']}</Link>
-                        <Link href="/shoppers" className={`${styles.menuItem} ${router.asPath === '/shoppers' && styles.active}`}>{t['For shoppers']}</Link>
+                    <button type="button" onClick={() => {setMenuOpen(!menuOpen)}} className={`${styles.menuOverlay} ${menuOpen && styles.active}`}></button>
+                    <div className={`${styles.menu} ${menuOpen && styles.active}`}>
+                        <div className={styles.menuContent}>
+                            <div className={`container ${styles.menuCon}`}>
+                                <Link href="/" className={`${styles.menuItem} ${router.asPath === '/' && styles.active}`}>{t['For businesses']}</Link>
+                                <Link href="/shoppers" className={`${styles.menuItem} ${router.asPath === '/shoppers' && styles.active}`}>{t['For shoppers']}</Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className={styles.right}>
                     <Dropdown />
                     <Link href="/contact" className={`${styles.btn} btn`}>{t['Get started']}</Link>
+                    <button type="button" onClick={() => {setMenuOpen(!menuOpen)}} className={`${styles.menuBtn} ${menuOpen && styles.active}`}>
+                        <span className={styles.menuBtnLine}></span>
+                    </button>
                 </div>
             </div>
         </header>

@@ -1,3 +1,4 @@
+@import '../mixins.scss';
 .header{
     position: fixed;
     top: 0;
@@ -9,6 +10,9 @@
     align-items: center;
     justify-content: center;
     background: #fff;
+    @include media(992){
+        border-bottom: 1px solid #f2f2f2;
+    }
 }
 .nav{
     display: flex;
@@ -28,7 +32,129 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 8px;
+    @include media(992){
+        position: absolute;
+        top: calc(100% + 1px);
+        background: #fff;
+        overflow: hidden;
+        width: 100%;
+        left: 0;
+        height: 0;
+        transition: 300ms ease-out;
+        &.active{
+            height: 58px;
+            visibility: visible;
+            .menuContent{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    &Btn {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        border: none;
+        outline: none;
+        background: none;
+        display: none;
+        @include media(992){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &Btn.active &BtnLine{
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    &Btn.active &BtnLine,
+    &Btn.active::before {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%) rotate(135deg);
+        -ms-transform: translate(-50%, -50%) rotate(135deg);
+        transform: translate(-50%, -50%) rotate(135deg);
+    }
+    
+    &Btn.active::after {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%) rotate(-135deg);
+        -ms-transform: translate(-50%, -50%) rotate(-135deg);
+        transform: translate(-50%, -50%) rotate(-135deg);
+    }
+    
+    &Btn::before,
+    &Btn::after,
+    &BtnLine {
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        position: absolute;
+        content: "";
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #626270;
+    }
+    
+    &Btn::before{
+        top: 20%;
+    }
+    &Btn::after{
+        bottom: 20%;
+    }
+    &Btn{
+        display: none;
+        @include media(992){
+            display: flex;
+            margin-left: 24px;
+        }
+    }
+    &Overlay{
+        display: none;
+        @include media(992){
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            &.active{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    &Content{
+        width: 100%;
+        padding: 10px 0 10px 0;
+        height: 58px;
+        min-height: 58px;
+        display: flex;
+        opacity: 0;
+        transition: 300ms ease-out;
+        visibility: hidden;
+    }
+    &Con{
+        width: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        padding: 0;
+        @include media(992){
+            padding: 0 15px;
+            width: 100%;
+        }
+    }
     &Item{
         padding: 8px 16px;
         color: #131313;
@@ -36,6 +162,14 @@
         text-decoration: none;
         transition: 300ms ease-out;
         border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
+        z-index: 2;
+        @include media(576){
+            font-size: 14px;
+        }
         &.active{
             background-color: #F2F2F2;
         }
@@ -97,4 +231,7 @@
 }
 .btn{
     margin-left: 24px;
+    @include media(992){
+        display: none !important;
+    }
 }
