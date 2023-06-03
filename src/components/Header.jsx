@@ -85,15 +85,15 @@ const Dropdown = () => {
                     animate={shown ? "enter" : "exit"}
                     className={styles.langList}
                 >
-                    <button className={styles.langItem} onClick={() => {router.push(router.pathname, router.asPath, { locale: 'en' })}}>
+                    <button className={styles.langItem} onClick={() => {router.push(router.pathname, router.asPath, { locale: 'en', scroll: false })}}>
                         <Image src="/en.svg" alt="" width={18} height={18} draggable="false" />
                         English
                     </button>
-                    <button className={styles.langItem} onClick={() => {router.push(router.pathname, router.asPath, { locale: 'ru' })}}>
+                    <button className={styles.langItem} onClick={() => {router.push(router.pathname, router.asPath, { locale: 'ru', scroll: false })}}>
                         <Image src="/ru.svg" alt="" width={18} height={18} draggable="false" />
                         Русский
                     </button>
-                    <button className={styles.langItem} onClick={() => {router.push(router.pathname, router.asPath, { locale: 'uz' })}}>
+                    <button className={styles.langItem} onClick={() => {router.push(router.pathname, router.asPath, { locale: 'uz', scroll: false })}}>
                         <Image src="/uz.svg" alt="" width={18} height={18} draggable="false" />
                         O&apos;zbekcha
                     </button>
