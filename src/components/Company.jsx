@@ -33,7 +33,13 @@ const Company = () => {
                 <div className={`${styles.item} ${styles.item1}`}>
                     <div className={styles.itemLeft}>
                         <p className={styles.itemTitle}>{t['Company item 1 title']}</p>
-                        <p className={styles.itemP}>{t['Company item 1 desc']}</p>
+                        <p className={styles.itemP}>
+                            {t['Company item 1 desc']}
+                            <Image src="/partner-1.svg" alt="" width={50} height={25} draggable={false} />
+                            <Image src="/partner-2.svg" alt="" width={71} height={19} draggable={false} />
+                            <Image src="/partner-3.svg" alt="" width={64} height={25} draggable={false} />
+                            <Image src="/partner-4.svg" alt="" width={114} height={19} draggable={false} />
+                        </p>
                     </div>
                     <div className={styles.itemRight}>
                         <div className={styles.itemImg}>
