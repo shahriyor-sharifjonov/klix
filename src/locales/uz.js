@@ -12,7 +12,22 @@ const uz = {
     "Company item 2 title": "Barcha to'lov usullari",
     "Company item 2 desc": "Mavjud tashrifchilaringizdan sotuvlarni oshiring, Baltikumda mashhur to'lov usullari bilan yuqori darajada to'lov jarayonini ta'minlaydigan va komissiya yo'q bo'lgan hesoblarni bo'lish imkoniyatini taqdim qiladigan oddiy to'lov jarayoni bilan.",
     "Company item 3 title": "Oson to'lov jarayoni",
-    "Company item 3 desc": "Mijozlarizga to'lov ma'lumotlarini kiriting va ularni qayta ishlashlarini osonlashtirib sotuvlarni oshiring."
+    "Company item 3 desc": "Mijozlarizga to'lov ma'lumotlarini kiriting va ularni qayta ishlashlarini osonlashtirib sotuvlarni oshiring.",
+    "Fees title": "To'lovlar va to'lovlar",
+    "Fees desc": "Noaniq to'lovlar yoki kutilmagan choralarni bilish, sho'rlamoq.",
+    "Fees btn 1": "Standart",
+    "Fees btn 2": "Maxsus",
+    "Fees item 1 title": "Kredit va debet kartalari",
+    "Fees item 1 p": "Butun dunyodagi mijozlarning barcha asosiy debit va kredit kartalarini qabul qiling.",
+    "Fees item 1 value": "1,3% dan",
+    "Fees item 2 title": "Ko'p qarzdorlik (hisobdan hisobga to'lovlar)",
+    "Fees item 2 p": "Mijozning onlayn bank hisob-kitoblari identifikatsiyasidan foydalanib to'lovni tasdiqlash orqali, bank hisobidan to'lovlar onlayn to'lovning ko'riladigan usuli sifatida qabul qilingan ko'p qarzdorliklar.",
+    "Fees item 2 value": "1,3% dan, minimal 0,10 EUR",
+    "Fees item 3 title": "Hozir sotib oling, keyin to'lang",
+    "Fees item 3 p": "Sotib olish konversiyasini va buyurtma qiymatini hisobga olib chiqaradigan qulay bo'shatma qilishni taklif qiling.",
+    "Fees item 3 value": "0,5% dan",
+    "Fees info": "Bir oyda €100,000 dan ortiq to'lov miqdori bo'lgan tadbirkorlar uchun mavjud",
+    "Fees info btn": "Biz bilan bog'laning",
 }
 
 export default uz
