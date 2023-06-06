@@ -1,6 +1,7 @@
 import Company from '@/components/Company'
 import Fees from '@/components/Fees'
 import Header from '@/components/Header'
+import Integrations from '@/components/Integrations'
 import Intro from '@/components/Intro'
 import Merchants from '@/components/Merchants'
 import Head from 'next/head'
@@ -13,6 +14,7 @@ export default function Home() {
       <Merchants />
       <Company />
       <Fees />
+      <Integrations />
     </>
   )
 }

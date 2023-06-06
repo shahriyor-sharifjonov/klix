@@ -28,6 +28,11 @@ const en = {
     "Fees item 3 value": "From 0,5%",
     "Fees info": "Available for businesses with more than €100,000 payment volume a month",
     "Fees info btn": "Contact us",
+    "Integrations title": "Effortless integrations for all major platforms",
+    "Integrations desc": "Get started in just a few minutes by installing one of our plugins or develop your own integration with our well-documented API",
+    "Integrations info 1": "Operating on a custom-built platform? Check out our ",
+    "Integrations info 2": "developer documentation ",
+    "Integrations info 3": "and develop your own integration with our API",
 }
 
 export default en

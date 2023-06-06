@@ -28,6 +28,11 @@ const uz = {
     "Fees item 3 value": "0,5% dan",
     "Fees info": "Bir oyda €100,000 dan ortiq to'lov miqdori bo'lgan tadbirkorlar uchun mavjud",
     "Fees info btn": "Biz bilan bog'laning",
+    "Integrations title": "Barcha asosiy platformalar uchun oson integratsiya",
+    "Integrations desc": "Bir necha daqiqada plaginlarimizdan birini oʻrnatish yoki yaxshi hujjatlashtirilgan API bilan oʻz integratsiyangizni rivojlantirish orqali boshlang.",
+    "Integrations info 1": "Maxsus yaratilgan platformada ishlayapsizmi? ",
+    "Integrations info 2": "Ishlab chiquvchi hujjatlarini ",
+    "Integrations info 3": "ko‘rib chiqing va API bilan o‘z integratsiyangizni rivojlantiring.",
 }
 
 export default uz

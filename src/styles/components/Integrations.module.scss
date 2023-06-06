@@ -1,0 +1,71 @@
+@import '../mixins.scss';
+.integrations{
+    background: #ECE8E6;
+}
+.body{
+    padding: 80px 15px;
+    background-image: url("data:image/svg+xml,%3Csvg width='323' height='101' viewBox='0 0 323 101' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M203.533 71.4612C132.794 10.897 -24.5782 112.175 3.77448 -26.5067C-6.06933 -76.4387 98.1223 -110.929 167.79 -109.202C231.679 -109.319 292.23 -73.2952 312.656 -22.9933C345.248 51.0687 295.216 149.772 203.757 71.0452' fill='%230094FF'/%3E%3C/svg%3E%0A"), url("data:image/svg+xml,%3Csvg width='445' height='160' viewBox='0 0 445 160' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M152.689 29.6885C260.402 107.56 418.24 51.3464 441.788 130.091C465.337 208.814 332.2 296.44 238.065 314.486C152.089 333.815 63.152 293.031 25.2822 216.873C-33.8658 105.496 13.1235 -70.9363 152.474 30.4357' fill='%23B58CCA'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top right, bottom left;
+    @include media(1200){
+        background: none;
+    }
+}
+.title{
+    font-size: 42px;
+    line-height: 120%;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 578px;
+    font-weight: 700;
+    @include media(576){
+        font-size: 27px;
+    }
+}
+.desc{
+    text-align: center;
+    font-size: 16px;
+    line-height: 140%;
+    max-width: 578px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    color: #626270;
+}
+.content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+.item{
+    background: #fff;
+    border-radius: 24px;
+    min-height: 144px;
+    width: calc(25% - 18px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    @include media(992){
+        width: calc(33.3333% - 16px);
+        min-height: 80px;
+    }
+    @include media(576){
+        width: calc(50% - 12px);
+    }
+}
+.info{
+    text-align: center;
+    max-width: 578px;
+    margin-left: auto;
+    margin-right: auto;
+    a{
+        color: #0094FF;
+        text-decoration: none;
+    }
+}
