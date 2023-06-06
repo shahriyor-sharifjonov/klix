@@ -53,19 +53,6 @@
         color: #fff;
     }
 }
-.item{
-    transition: 150ms ease-out;
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-    &.show{
-        opacity: 1;
-        visibility: visible;
-    }
-    &.active{
-        display: block;
-    }
-}
 .info{
     display: flex;
     flex-direction: column;
@@ -79,5 +66,86 @@
     a{
         margin-left: auto;
         margin-right: auto;
+    }
+}
+.item{
+    transition: 150ms ease-out;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    &.show{
+        opacity: 1;
+        visibility: visible;
+    }
+    &.active{
+        display: block;
+    }
+}
+.table{
+    border: 2px solid #E6E6E6;
+    border-radius: 24px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    &Row{
+        display: flex;
+        justify-content: space-between;
+        @include media(992){
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        &+.tableRow{
+            border-top: 2px solid #E6E6E6;
+        }
+    }
+    &Title{
+        font-size: 16px;
+        line-height: 120%;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    &Desc{
+        color: #626262;
+        font-size: 14px;
+        line-height: 120%;
+        margin-bottom: 8px;
+    }
+    &Content{
+        min-width: 75%;
+        width: 75%;
+        padding: 32px 24px;
+        @include media(992){
+            padding: 32px 24px 16px 24px;
+            width: 100%;
+        }
+    }
+    &Imgs{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+    &Value{
+        flex: 1 1 auto;
+        border-left: 2px solid #E6E6E6;
+        padding: 32px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include media(992){
+            padding: 0 24px 32px 24px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            border-left: none;
+        }
+    }
+    &P{
+        text-align: center;
+        font-size: 18px;
+        line-height: 120%;
+        @include media(992){
+            text-align: left;
+        }
     }
 }
